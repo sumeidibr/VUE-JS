@@ -1,14 +1,17 @@
 <script setup>
 
 // Funcao para validar o formulario
-function validaFormulario() {
+function validaFormulario(event) {
     alert('Evento d submissao');
     
+    event.preventDefault();
 }
+
+
 </script>
 
 <template>
-<form @submit="validaFormulario">
+<form action="https://google.com" @submit="validaFormulario">
     <input type="submit" value="Enviar formulario">
 </form>
 </template>
